@@ -1,0 +1,38 @@
+BoundedContext ContextoRecoleccionDatos {
+
+     domainVisionStatement = "El contexto Recoleccion de datos se encarga de solicitar y recibir los datos brutos de
+     los centros de salud y anonimizarlos"
+
+}
+BoundedContext ContextoProcesamientoDatos{
+
+     domainVisionStatement = "El contexto de procesamiente de los datos se encarga de trasnformar los datos anonimizados para
+     dejarlos listo para el consumo por parte de los clientes de salud tech. Esto incluye el mapeo, clasificacion, 
+     enriquecimiento y canonizacion de los datos"
+
+}
+BoundedContext ContextoPresentacionDatos{
+
+     domainVisionStatement = "El contexo de presentacion de datos se encarga del manejo del sistema que consumen los usuarios
+     de la saludtech donde se solicitan imagenes medicas anonimizadas y enriquezidas para el entranmiento de modelos AI"
+
+}
+BoundedContext ContextoClientes{
+     domainVisionStatement = "El contexo de clientes se encarga del manejo del sistema que maneja los clientes existentes y 
+     potenciales del sistema, esto incluye la autenticacion de usuarios, el sistema de pago y el sistema de servicio al cliente"
+}
+
+ContextMap SaludTechDeLosAlpes{
+    state = AS_IS
+    
+    contains ContextoRecoleccionDatos
+    contains ContextoProcesamientoDatos
+    contains ContextoPresentacionDatos
+    contains ContextoClientes
+
+    ContextoRecoleccionDatos[SK]<->[SK] ContextoProcesamientoDatos
+    ContextoProcesamientoDatos[U]->[D] ContextoPresentacionDatos
+    ContextoPresentacionDatos[U]->[D]ContextoClientes
+
+
+} 
