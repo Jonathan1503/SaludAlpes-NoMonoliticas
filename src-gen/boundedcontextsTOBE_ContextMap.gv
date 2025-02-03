@@ -1,0 +1,26 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"ContextoClientes" ["margin"="0.3","orientation"="4","shape"="egg","fontsize"="16","style"="bold","label"="ContextoClientes\n","fontname"="sans-serif"]
+"ContextoPresentacionDatos" ["margin"="0.3","orientation"="250","shape"="egg","fontsize"="16","style"="bold","label"="ContextoPresentacionDatos\n","fontname"="sans-serif"]
+"ContextoProcesamientoDatos" ["margin"="0.3","orientation"="51","shape"="egg","fontsize"="16","style"="bold","label"="ContextoProcesamientoDatos\n","fontname"="sans-serif"]
+"ContextoProcesamientoDatosUS" ["margin"="0.3","orientation"="5","shape"="egg","fontsize"="16","style"="bold","label"="ContextoProcesamientoDatosUS\n","fontname"="sans-serif"]
+"ContextoRecoleccionDatos" ["margin"="0.3","orientation"="341","shape"="egg","fontsize"="16","style"="bold","label"="ContextoRecoleccionDatos\n","fontname"="sans-serif"]
+"ContextoRecoleccionDatosUS" ["margin"="0.3","orientation"="71","shape"="egg","fontsize"="16","style"="bold","label"="ContextoRecoleccionDatosUS\n","fontname"="sans-serif"]
+"ContextoPresentacionDatos" -> "ContextoClientes" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ContextoProcesamientoDatos" -> "ContextoPresentacionDatos" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ContextoProcesamientoDatosUS" -> "ContextoPresentacionDatos" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ContextoRecoleccionDatos" -> "ContextoProcesamientoDatos" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"ContextoRecoleccionDatosUS" -> "ContextoProcesamientoDatosUS" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+}
