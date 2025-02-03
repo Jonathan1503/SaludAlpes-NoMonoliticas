@@ -1,0 +1,39 @@
+
+  Domain SaludTech {
+    domainVisionStatement = "Proveer de manera global servicios de procesamiento de datos médicos (ingestión, anonimización, procesamiento y distribución) garantizando la mayor disponibilidad y escalabilidad de los servicios."
+
+    Subdomain Captura {
+      type = CORE_DOMAIN
+      domainVisionStatement = "Garantizar la recolección confiable y la anonimización segura de datos médicos, cumpliendo con normativas internacionales de privacidad."
+    }
+
+    Subdomain Procesamiento {
+      type = CORE_DOMAIN
+      domainVisionStatement = "Proveer métodos y herramientas para clasificar, etiquetar y enriquecer metadatos de las imágenes médicas, facilitando su uso en el entrenamiento de modelos de IA."
+    }
+
+    Subdomain Visualizacion {
+      type = CORE_DOMAIN
+      domainVisionStatement = "Ofrecer interfaces y mecanismos eficientes para la visualización, exploración y distribución de datos médicos anonimizados a clientes y partners."
+    }
+
+    Subdomain Almacenamiento {
+      type = GENERIC_SUBDOMAIN
+      domainVisionStatement = "Administrar un entorno en la nube escalable y seguro para el almacenamiento y gestión de grandes volúmenes de datos médicos."
+    }
+
+    Subdomain Autenticacion {
+      type = GENERIC_SUBDOMAIN
+      domainVisionStatement = "Permitir la administración eficiente de usuarios, clientes y sus credenciales, garantizando controles de acceso robustos y la segregación de datos."
+    }
+
+    Subdomain Atencion {
+      type = SUPPORTING_DOMAIN
+      domainVisionStatement = "Mantener y fortalecer las relaciones con proveedores de datos, distribuidores y demás partners, brindando soporte y garantizando la calidad del servicio."
+    }
+
+    Subdomain Facturacion {
+      type = GENERIC_SUBDOMAIN
+      domainVisionStatement = "Facilitar la facturación, el procesamiento de pagos y la gestión de suscripciones de los distintos planes de acceso (Standard, Pro, Enterprise)."
+    }
+  }
